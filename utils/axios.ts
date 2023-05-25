@@ -13,10 +13,11 @@ export const useAxios = () => {
     }, (err: AxiosError) => {
       if (err.status) {
         if (err.status === 401) {
-          navigation.navigate("Login");
+          navigation.navigate('Login');
         }
       }
     });
     return axios;
   }, []);
+  return myAxios;
 };
